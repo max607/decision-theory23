@@ -95,6 +95,67 @@ $\rightarrow$ slides 34 -- 79
 * TODO slides 96 -- 98
 * Slide 103 $\rightarrow$ nice tutorial paper
 
-# Randomized actions
+# Randomized actions - mixed extension
 
 * Hardcore definition
+* Utility under fixed state-of-nature is the expectancy w.r.t. the actions
+* $\mathbb{P}(a) = \delta(a_\ell) \rightarrow$ pure action
+* Discussion of randomized actions $\rightarrow$ next Monday (a.k.a. problem sheet)
+
+# Deciding with data
+
+* Observation of random experiment (sampling, asking an expert, ...)
+* Decision functions of sample
+  * $d: \mathcal{X} \rightarrow \mathbb{A}$
+  * $x \mapsto d(x)$ \
+    $\rightarrow$ evaluate decision functions
+  * $p_{\vartheta_1}(\{x_1\}) = p(\{x_1\} || \vartheta_1)$
+  * $||:$ frequentist: $\vartheta_1$ is not random!
+  * TODO statistics and constructivism
+* Now: randomized actions, but the randomness is from sampling given true data
+  * Fix strategy before seeing the data. E.g., tempting in the case of searching for new medicine
+  * $U(d^+, \vartheta_j) := \sum_{l = 1}^s u(d^+(x_\ell), \vartheta_j)\ p_{\vartheta_j}(\{x_\ell\})$
+* Data-based decision problem
+  * $((\mathbb{A}, \Theta, u(a)), (\mathcal{X}, \sigma(\mathcal{X}), p_\vartheta))$
+  * $a \in \mathbb{A}, \vartheta \in \Theta$
+  * Need $\vartheta$ two times: for the utility function and for the probability for actions
+* Common to use loss - so risk notation $\rightarrow$ similar to machine learning
+* Data-free problem can be induced by data $\rightarrow$ just a special case
+* Formally every decision problem can be written as a data-free decision problem
+
+# Re-framing estimation and testing
+
+* Estimation part on Monday
+* Testing part on Tuesday
+* From slide 141
+
+# Decision rules and principles
+
+* Rules give optimal decisions, but only under certain conditions
+* Principles: only avoid obviously dumb actions
+  * One curve is completely under another $\rightarrow$ principle
+  * Curves overlap $\rightarrow$ aggregate by rule (loose information, make a lot of assumptions)
+* Meta rules: interesting paper, decision rules for decision rules <!-- TODO -->
+
+## Order theory
+
+* Is about $<, >, \leq, \geq, ...$
+* Easy: $\left( \begin{matrix} 1 \\ 2 \\ \end{matrix} \right) \overset{?}{<} \left( \begin{matrix} 2 \\ 3 \\ \end{matrix} \right) \rightarrow$ principle
+* Problem: $\left( \begin{matrix} 1 \\ 2 \\ \end{matrix} \right) \overset{?}{<} \left( \begin{matrix} 2 \\ 1 \\ \end{matrix} \right) \rightarrow$ rule
+* Pareto front
+* Dominance: not reasonable to choose an inadmissible action
+* Admissible: action, which is not strictly dominated by any action
+* Admissibility of a certain action can be lost when moving to mixed extension
+* Mixed extension makes Pareto front smooth (Pareto front: smallest set of admissible actions, relation to complete cases)
+
+## Complete classes
+
+* $\forall a \in \mathbb{A} \setminus \mathbb{C}\ \exists a^* \in \mathbb{C}: a^* \succ a$
+* Set $\mathbb{C}$
+
+## Optimality criterion
+
+* Lexicographic order: Like in a dictionary (aa, ab, ba, ...)
+  * q-step optimality criterion $\rightarrow$ makes an odering, rule: take the best
+<!-- slide 181 -->
+
