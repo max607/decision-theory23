@@ -147,6 +147,13 @@ $\rightarrow$ slides 34 -- 79
 * Admissible: action, which is not strictly dominated by any action
 * Admissibility of a certain action can be lost when moving to mixed extension
 * Mixed extension makes Pareto front smooth (Pareto front: smallest set of admissible actions, relation to complete cases)
+* Randomization: decision based on information-less data
+
+```r
+# Example Pareto front
+plot(c(7, 6, 6, 4, 1, 2, 6, 6.5), c(3, 5, 5, 4, 6, 5, 4, 3.5))
+lines(c(1, 6, 6.5, 7), c(6, 5, 3.5, 3))
+```
 
 ## Complete classes
 
@@ -158,4 +165,30 @@ $\rightarrow$ slides 34 -- 79
 * Lexicographic order: Like in a dictionary (aa, ab, ba, ...)
   * q-step optimality criterion $\rightarrow$ makes an odering, rule: take the best
 <!-- slide 181 -->
+
+## Exercise 2
+
+### Problem 3
+
+<!-- TODO What is a sigma space? -->
+
+| decision theory       | estimation theory                            | testing theory |
+|-----------------------|----------------------------------------------|----------------|
+| state space           | parameter space                              |                |
+| state                 | true parameter                               |                |
+| action                | estimate                                     |                |
+| loss function         | negative log-likelihood, distance measure    |                |
+| **data based**        |                                              |                |
+| decision function     | estimator, $\hat{\vartheta}(Z_1, ..., Z_n)$  |                |
+| risk function         | loss in the data-based problem               |                |
+| information structure | $\mathcal{X}$, $\sigma$-field, $p_\vartheta$ |                |
+
+* $Z_i \overset{iid}{\sim} N(\mu, \sigma^2)$
+* $\mathcal{X} = \mathbb{R}^n$
+* $p_\vartheta$: How are the data distributed? $\rightarrow p_\vartheta^{\otimes n} \overset{ind}{=} \prod_{i = 1}^n q_\vartheta(Z_i = z_i)$
+* risk function: $f(\text{decision function}, \text{true parameter})$
+* $\mathcal{R}(\hat{\vartheta}(Z_1, ..., Z_n), \vartheta) = \mathbb{E}_{p_\vartheta}(\mathcal{L}(\hat{\vartheta}(Z_1, ..., Z_n), \vartheta))= \text{MSE}_\vartheta(\hat{\vartheta}(Z_1, ..., Z_n), \vartheta) \overset{unbiased}{=} \mathbb{V}_{p_\vartheta}(\hat{\vartheta}(Z_1, ..., Z_n))$
+* Uniformly optimal procedure?
+  * $\mathcal{R}(\hat{\vartheta}^*(Z_1, ..., Z_n), \vartheta) \le \mathcal{R}(\hat{\vartheta}(Z_1, ..., Z_n), \vartheta), \forall \hat\vartheta \in \mathcal{D}, \vartheta \in \Theta$
+  * Impossible, e.g., for $\text{MSE}$: choose $\hat\vartheta \equiv \vartheta, \forall \vartheta \in \Theta$
 
