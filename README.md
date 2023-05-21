@@ -192,3 +192,34 @@ lines(c(1, 6, 6.5, 7), c(6, 5, 3.5, 3))
   * $\mathcal{R}(\hat{\vartheta}^*(Z_1, ..., Z_n), \vartheta) \le \mathcal{R}(\hat{\vartheta}(Z_1, ..., Z_n), \vartheta), \forall \hat\vartheta \in \mathcal{D}, \vartheta \in \Theta$
   * Impossible, e.g., for $\text{MSE}$: choose $\hat\vartheta \equiv \vartheta, \forall \vartheta \in \Theta$
 
+In a Bayesian setting randomization does not pay out 
+* because we have an equivalent pure action a, for every randomized action $\tilde{a}$
+
+Are reversely admissible actions also Bayes actions?
+* Bayes Action $\rightarrow$ admissible does not hold if regularity conditions do not hold
+* What are regularity conditions
+
+Discussion between subjectivity and objectivity
+* Prior distribution might be subjektiv
+* still if you don't agree with the prior, you have an admissible solution for the decision problem
+* super-objectivists are in some sense subjective as well
+
+Probability is a degree to which something can be proven.
+Propensity concept (Popper):
+
+Probability allows inference concepts
+Critique on frequentist: What are similar cases <--- That's subjective
+
+
+Text:
+* Probability is a property of the subject not of the object: In which way is the subject uncertain?
+* It's not important if there is randomness
+* Random numbers are deterministic, because they are constructed in a deterministic way.
+* --> If we assign Probabilities we are all subjectivists in definition
+* "I can not criticize the bases/assumptions, i can only criticize the consistency"
+* In Bayes probabilities are assigned to parameters, because we are uncertain about them
+
+TODO Have a look onto recap slides until next week
+
+Laplace criterion
+* all that holds for Bayesion, holds for laplace, too (randomization does not work, admissibility)
