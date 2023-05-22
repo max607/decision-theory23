@@ -172,16 +172,16 @@ lines(c(1, 6, 6.5, 7), c(6, 5, 3.5, 3))
 
 <!-- TODO What is a sigma space? -->
 
-| decision theory       | estimation theory                            | testing theory |
-|-----------------------|----------------------------------------------|----------------|
-| state space           | parameter space                              |                |
-| state                 | true parameter                               |                |
-| action                | estimate                                     |                |
-| loss function         | negative log-likelihood, distance measure    |                |
-| **data based**        |                                              |                |
-| decision function     | estimator, $\hat{\vartheta}(Z_1, ..., Z_n)$  |                |
-| risk function         | loss in the data-based problem               |                |
-| information structure | $\mathcal{X}$, $\sigma$-field, $p_\vartheta$ |                |
+| decision theory           | estimation theory                            | testing theory                                                                                                                     |
+|---------------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| state space $\Theta$      | parameter space                              | $\{H_0, H_1\}$                                                                                                                     |
+| state $\vartheta$         | true parameter                               | $H_i$                                                                                                                              |
+| action space $\mathbb{A}$ | all possible estimates                       | (don't) reject $H_0$                                                                                                               |
+| loss function             | negative log-likelihood, distance measure    | decide for a vier-Felder-Tafel                                                                                                     |
+| **data based**            |                                              |                                                                                                                                    |
+| decision function         | estimator, $\hat{\vartheta}(Z_1, ..., Z_n)$  | $d(T(\bm{Z}) = t) = \begin{cases} H_1,& \text{if } t \in \mathbb{C}(q_{\Upsilon_0}, \alpha) \\ H_0,& \text{otherwise} \end{cases}$ |
+| risk function             | see below                                    | $\mathcal{R}(d, H_i) = \mathbb{E}_X(\mathcal{L}(d(X),H_i))$                                                                               |
+| information structure     | $\mathcal{X}$, $\sigma$-field, $p_\vartheta$ |                                                                                                                                    |
 
 * $Z_i \overset{iid}{\sim} N(\mu, \sigma^2)$
 * $\mathcal{X} = \mathbb{R}^n$
@@ -191,4 +191,13 @@ lines(c(1, 6, 6.5, 7), c(6, 5, 3.5, 3))
 * Uniformly optimal procedure?
   * $\mathcal{R}(\hat{\vartheta}^*(Z_1, ..., Z_n), \vartheta) \le \mathcal{R}(\hat{\vartheta}(Z_1, ..., Z_n), \vartheta), \forall \hat\vartheta \in \mathcal{D}, \vartheta \in \Theta$
   * Impossible, e.g., for $\text{MSE}$: choose $\hat\vartheta \equiv \vartheta, \forall \vartheta \in \Theta$
+
+### Problem 6
+
+```r
+plot(c(7, 6, 6, 4, 1, 2, 6, 6.5), c(3, 5, 5, 4, 6, 5, 4, 3.5))
+points(c(6.5, 4.6), c(4, 4.1), col = "red")
+lines(c(1, 6, 6.5, 7), c(6, 5, 4, 3))
+lines(c(1, 2, 4, 7), c(6, 5, 4, 3))
+```
 
