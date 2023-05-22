@@ -201,3 +201,50 @@ lines(c(1, 6, 6.5, 7), c(6, 5, 4, 3))
 lines(c(1, 2, 4, 7), c(6, 5, 4, 3))
 ```
 
+# Bayes <!-- David -->
+
+In a Bayesian setting randomization does not pay out
+* because we have an equivalent pure action a, for every randomized action $\tilde{a}$
+
+Are reversely admissible actions also Bayes actions?
+* Bayes Action $\rightarrow$ admissible does not hold if regularity conditions do not hold
+* What are regularity conditions
+
+Discussion between subjectivity and objectivity
+* Prior distribution might be subjektiv
+* still if you don't agree with the prior, you have an admissible solution for the decision problem
+* super-objectivists are in some sense subjective as well
+
+Probability is a degree to which something can be proven.
+Propensity concept (Popper):
+
+Probability allows inference concepts
+Critique on frequentist: What are similar cases $\leftarrow$ That's subjective
+
+
+## Text
+
+* Probability is a property of the subject not of the object: In which way is the subject uncertain?
+* It's not important if there is randomness
+* Random numbers are deterministic, because they are constructed in a deterministic way.
+* $\rightarrow$ If we assign Probabilities we are all subjectivists in definition
+* "I can not criticize the bases/assumptions, i can only criticize the consistency"
+* In Bayes probabilities are assigned to parameters, because we are uncertain about them
+
+## Laplace criterion
+
+* all that holds for Bayesian, holds for Laplace, too (randomization does not work, admissibility)
+
+<!-- set 5, slide 245 -->
+
+# Regret
+
+* Always a loss problem -- weather one starts with utility or loss
+* Minimax action with transformed utility function
+* Doesn't make that much sense, but kind of models consumer behavior
+
+# Hurwicz criterion, Hodges-Lehmann
+
+* Convex combination: $\Phi_\alpha(x, y) = \alpha x + (1 - \alpha) y$
+* Sensitivity analysis w.r.t. $\alpha$ possible
+
